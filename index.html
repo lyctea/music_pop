@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title>豆瓣音乐</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <script src="move.js"></script>
+    <script>
+        window.onload = function(){
+            var player = document.getElementsByClassName("player")[0];
+            var dbhide = document.getElementById("dbhide");
+            var dbshow = document.getElementById("dbshow");
+
+            dbhide.onclick = function(){
+                startMove(player,{width:0});
+                startMove(dbhide,{width:0});
+            };
+            dbshow.onclick = function(){
+                startMove(player,{width:283});
+                startMove(dbhide,{width:45});
+            };
+        };
+
+    </script>
+</head>
+<body>
+    <div class="music_pop">
+        <div class="player"></div>
+        <a id="dbhide" href="javascript:void(0)"></a>
+        <a id="dbshow" href="javascript:void(0)"></a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,18 @@
+.player{
+    float: left;
+    width: 283px;
+    height: 60px;
+    background: url(music.png)no-repeat;
+}
+#dbhide{
+    width: 45px;
+    height: 60px;
+    float: left;
+    background: url(music.png)no-repeat -283px;
+}
+#dbshow{
+    width: 46px;
+    height: 60px;
+    float: left;
+    background: url(music.png)no-repeat -329px;
+}
