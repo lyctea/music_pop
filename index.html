@@ -4,28 +4,26 @@
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
     <title>豆瓣音乐</title>
     <link rel="stylesheet" type="text/css" href="index.css">
-    <script src="move.js"></script>
+    <script src="js/jquery.js"></script>
     <script>
-        window.onload = function(){
-            var player = document.getElementsByClassName("player")[0];
-            var dbhide = document.getElementById("dbhide");
-            var dbshow = document.getElementById("dbshow");
+        $(document).ready(function(){
+            $("#dbhide").click(function(){
+                $("#player").animate({width:0}, 500,function(){
+                    $("#dbhide").animate({width:0},700);
+                })
+            })
+            $("#dbshow").click(function(){
+                $("#player").animate({width:283}, 500,function(){
+                    $("#dbhide").animate({width:45},700);
+                })
+            })
 
-            dbhide.onclick = function(){
-                startMove(player,{width:0});
-                startMove(dbhide,{width:0});
-            };
-            dbshow.onclick = function(){
-                startMove(player,{width:283});
-                startMove(dbhide,{width:45});
-            };
-        };
-
+        })
     </script>
 </head>
 <body>
     <div class="music_pop">
-        <div class="player"></div>
+        <div id="player"></div>
         <a id="dbhide" href="javascript:void(0)"></a>
         <a id="dbshow" href="javascript:void(0)"></a>
     </div>
